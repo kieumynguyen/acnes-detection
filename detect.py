@@ -20,7 +20,7 @@ model = load_model(r"C:\Users\LENOVO\acnes-detection\src\facemodel.model")
 
 # load the input image from disk, clone it, and grab the image spatial
 # dimensions
-image = cv2.imread("acne.jpg")
+image = cv2.imread("non-acne.jpg")
 orig = image.copy()
 (h, w) = image.shape[:2]
 
