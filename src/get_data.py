@@ -1,8 +1,9 @@
 import requests
 import os
 import shutil
+from zipfile import ZipFile
 
-FILE_ID = '1fspA_-p1iA6j6DpAbPJVakSGY1YHS_6P'
+FILE_ID = '1MtPgpW9uEISbiCq9rbf6BFZVT5GbSgep'
 DESTINATION = './data/data.zip'
 
 def download_file_from_google_drive(id, destination):
@@ -39,3 +40,7 @@ if __name__ == '__main__':
         shutil.rmtree('data')
     os.makedirs('./data')
     download_file_from_google_drive(FILE_ID, DESTINATION)
+
+    with ZipFile('./data/data.zip', 'r') as zip_file:
+        zip_file.extractall('./data')
+    print('Success unzip file')

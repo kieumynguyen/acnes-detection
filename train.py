@@ -30,7 +30,7 @@ BS = 32
 # grab the list of images in our dataset directory, then initialize
 # the list of data (i.e., images) and class images
 print("[INFO] loading images...")
-imagePaths = list(paths.list_images(r"C:\Users\LENOVO\acne-detection\dataset"))
+imagePaths = list(paths.list_images(r".\data\dataset"))
 data = []
 labels = []
 

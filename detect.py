@@ -16,7 +16,7 @@ net = cv2.dnn.readNet(prototxtPath, weightsPath)
 
 # load the face mask detector model from disk
 print("[INFO] loading face acne detector model...")
-model = load_model(r"C:\Users\LENOVO\acnes-detection\src\facemodel.model")
+model = load_model(r".\facemodel.model")
 
 # load the input image from disk, clone it, and grab the image spatial
 # dimensions
