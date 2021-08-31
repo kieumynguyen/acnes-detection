@@ -6,7 +6,7 @@ import argparse
 import cv2
 import os
 from matplotlib import pyplot as plt
-
+from src.facemodel import model
 # load our serialized face detector model from disk
 print("[INFO] loading face detector model...")
 prototxtPath = os.path.sep.join(["face_detector", "deploy.prototxt"])
@@ -16,7 +16,6 @@ net = cv2.dnn.readNet(prototxtPath, weightsPath)
 
 # load the face mask detector model from disk
 print("[INFO] loading face acne detector model...")
-model = load_model(r".\facemodel.model")
 
 # load the input image from disk, clone it, and grab the image spatial
 # dimensions
