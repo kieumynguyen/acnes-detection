@@ -1,3 +1,5 @@
+
+# import the necessary packages
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
@@ -6,7 +8,10 @@ import argparse
 import cv2
 import os
 from matplotlib import pyplot as plt
-from src.facemodel import model
+
+
+
+
 # load our serialized face detector model from disk
 print("[INFO] loading face detector model...")
 prototxtPath = os.path.sep.join(["face_detector", "deploy.prototxt"])
@@ -16,10 +21,11 @@ net = cv2.dnn.readNet(prototxtPath, weightsPath)
 
 # load the face mask detector model from disk
 print("[INFO] loading face acne detector model...")
+model = load_model(r".\src\facemodel.model")
 
 # load the input image from disk, clone it, and grab the image spatial
 # dimensions
-image = cv2.imread("non-acne.jpg")
+image = cv2.imread("images.jpg")
 orig = image.copy()
 (h, w) = image.shape[:2]
 
