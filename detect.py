@@ -25,7 +25,7 @@ model = load_model(r".\src\facemodel.model")
 
 # load the input image from disk, clone it, and grab the image spatial
 # dimensions
-image = cv2.imread("images.jpg")
+image = cv2.imread("non-acne.jpg")
 orig = image.copy()
 (h, w) = image.shape[:2]
 
