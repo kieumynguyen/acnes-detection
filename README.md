@@ -3,8 +3,8 @@
 # **Installation**
 ## Create virtual environment
 ```bash
-conda create -n myenv python=3.8
-conda activate myenv
+conda create -n acnes python=3.8
+conda activate acnes
 ```
 ```bash
 git clone https://github.com/kieumynguyen/acnes-detection.git
